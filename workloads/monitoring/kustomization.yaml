@@ -4,8 +4,8 @@ metadata:
   name: monitoring
 resources:
   - namespace.yaml
-  - helmrepo.yaml
-  - prometheus-helmrelease.yaml
-  - loki-helmrelease.yaml
-  - grafana-helmrelease.yaml
-  - promtail-helmrelease.yaml
+  - HelmRelease-grafana.yaml
+  - HelmRelease-loki.yaml
+  - HelmRelease-prometheus.yaml
+  - HelmRelease-promtail.yaml
+

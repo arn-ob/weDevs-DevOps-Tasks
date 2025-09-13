@@ -4,18 +4,20 @@ metadata:
   name: loki
   namespace: monitoring
 spec:
-  interval: 5m           
+  interval: 5m
   chart:
     spec:
       chart: loki
+      version: 5.11.0
       sourceRef:
         kind: HelmRepository
         name: grafana
-        namespace: monitoring
-      version: "5.11.0"
+        namespace: flux-system
   values:
     persistence:
       enabled: true
       size: 10Gi
-    service:
-      type: ClusterIP
+    config:
+      table_manager:
+        retention_deletes_enabled: true
+        retention_period: 15d
