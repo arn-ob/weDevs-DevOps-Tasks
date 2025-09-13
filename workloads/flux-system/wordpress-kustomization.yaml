@@ -10,6 +10,6 @@ spec:
   prune: true
   sourceRef:
     kind: GitRepository
-    name: weDevs-DevOps-Tasks
+    name: wordpress
     namespace: flux-system
   validation: client
