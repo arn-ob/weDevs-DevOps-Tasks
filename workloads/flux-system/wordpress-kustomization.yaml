@@ -10,6 +10,6 @@ spec:
   prune: true
   sourceRef:
     kind: GitRepository
-    name: workflow
+    name: flux-system
     namespace: flux-system
   validation: client
