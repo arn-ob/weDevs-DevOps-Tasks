@@ -345,3 +345,5 @@ All The yaml are in workloads/wordpress
 Output
 
 ![Wordpress!](wordpress.png "Wordpress")
+
+![Wordpress!](wp-dashboard.png "Wordpress")
