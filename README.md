@@ -169,6 +169,8 @@ Create `/root/.sops.yaml`:
 creation_rules:
   - age: >-
       age1vsh7t60jklcwj86ynj3jyezfc7p3849vsjffmf5m37tnha2sw4asl39csf
+    encrypted_regex: '^(data|stringData)$'
+    path_regex: '.*\.(secret|enc)\.yaml$'
 ```
 
 Encrypt a Secret with SOPS `secret.yaml`
