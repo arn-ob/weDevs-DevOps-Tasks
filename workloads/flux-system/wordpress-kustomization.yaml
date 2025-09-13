@@ -5,7 +5,7 @@ metadata:
   name: wordpress-stack
   namespace: flux-system
 spec:
-  interval: 5m
+  interval: 1m
   path: ./workloads/wordpress    # path in your Git repository where manifests live
   prune: true
   sourceRef:
