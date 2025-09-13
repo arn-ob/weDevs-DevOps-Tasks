@@ -1,0 +1,23 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+metadata:
+  name: monitoring
+resources:
+  - github.com/grafana/helm-charts/prometheus?ref=46.6.0
+  - github.com/grafana/helm-charts/loki?ref=5.11.0
+  - github.com/grafana/helm-charts/grafana?ref=7.17.0
+  - github.com/grafana/helm-charts/promtail?ref=5.11.0
+
+helmCharts:
+  - name: prometheus
+    releaseName: prometheus
+    valuesFile: prometheus-values.yaml
+  - name: loki
+    releaseName: loki
+    valuesFile: loki-values.yaml
+  - name: grafana
+    releaseName: grafana
+    valuesFile: grafana-values.yaml
+  - name: promtail
+    releaseName: promtail
+    valuesFile: promtail-values.yaml
