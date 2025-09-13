@@ -344,6 +344,8 @@ All The yaml are in workloads/wordpress
 
 Output
 
-![Wordpress!](wordpress.png "Wordpress")
+![Wordpress setup!](wordpress.png "Wordpress setup")
 
-![Wordpress!](wp-dashboard.png "Wordpress")
+![Wordpress login!](wp-login.png "Wordpress login")
+
+![Wordpress dashboard!](wp-dashboard.png "Wordpress dashboard")
