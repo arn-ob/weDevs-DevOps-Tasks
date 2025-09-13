@@ -293,3 +293,52 @@ nginx-l2adv   ["nginx-ip-pool"]
 
 All The yaml are in workloads/ingress-nginx
 
+After Deploying, Output
+
+```bash
+root@ubuntu-Standard-PC-i440FX-PIIX-1996:/home/ubuntu# k get ns
+NAME              STATUS   AGE
+default           Active   133m
+flux-system       Active   124m
+ingress-nginx     Active   7m53s
+kube-node-lease   Active   133m
+kube-public       Active   133m
+kube-system       Active   133m
+metallb-system    Active   33m
+nginx-app         Active   80m
+```
+
+View all the services of `ingress-nginx`
+
+```bash
+NAME                                            READY   STATUS    RESTARTS   AGE
+pod/ingress-nginx-controller-7cf74bc745-g2qf2   1/1     Running   0          3m9s
+
+NAME                                         TYPE           CLUSTER-IP      EXTERNAL-IP      PORT(S)                      AGE
+service/ingress-nginx-controller             LoadBalancer   10.43.72.109    192.168.88.150   80:30137/TCP,443:30441/TCP   3m10s
+service/ingress-nginx-controller-admission   ClusterIP      10.43.171.234   <none>           443/TCP                      3m10s
+
+NAME                                       READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/ingress-nginx-controller   1/1     1            1           3m10s
+
+NAME                                                  DESIRED   CURRENT   READY   AGE
+replicaset.apps/ingress-nginx-controller-7cf74bc745   1         1         1       3m9s
+```
+
+If i curl the ip, return the 404 Not Found page, Means it works 
+
+```bash
+root@ubuntu-Standard-PC-i440FX-PIIX-1996:/home/ubuntu# curl 192.168.88.150
+<html>
+<head><title>404 Not Found</title></head>
+<body>
+<center><h1>404 Not Found</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+```
+
+### Deploy the following workloads via FluxCD
+
+All The yaml are in workloads/wordpress
+
