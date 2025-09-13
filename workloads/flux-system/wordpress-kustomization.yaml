@@ -1,0 +1,15 @@
+# flux-system/wordpress-kustomization.yaml
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: wordpress-stack
+  namespace: flux-system
+spec:
+  interval: 5m
+  path: ./workloads/wordpress    # path in your Git repository where manifests live
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: arn-ob/weDevs-DevOps-Tasks
+    namespace: flux-system
+  validation: client
