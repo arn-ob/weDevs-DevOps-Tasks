@@ -4,3 +4,4 @@ resources:
 - namespace.yaml
 - HelmRepository.yaml
 - HelmRelease.yaml
+- default-backend.yaml

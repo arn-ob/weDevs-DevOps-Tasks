@@ -1,0 +1,36 @@
+# flux-system/ingress-nginx/default-backend.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: default-backend
+  namespace: ingress-nginx
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: default-backend
+  template:
+    metadata:
+      labels:
+        app: default-backend
+    spec:
+      containers:
+      - name: default-backend
+        image: nginx:stable-alpine
+        command: ["/bin/sh", "-c"]
+        args:
+          - echo 'server { listen 8080; return 302 https://google.com; }' > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: default-backend
+  namespace: ingress-nginx
+spec:
+  selector:
+    app: default-backend
+  ports:
+    - port: 80
+      targetPort: 8080
