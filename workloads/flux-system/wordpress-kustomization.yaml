@@ -6,7 +6,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 5m
-  path: ./wordpress    # path in your Git repository where manifests live
+  path: ./workloads/wordpress    # path in your Git repository where manifests live
   prune: true
   sourceRef:
     kind: GitRepository
