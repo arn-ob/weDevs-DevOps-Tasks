@@ -21,12 +21,8 @@ spec:
       retries: 3
   values:
     controller:
-      defaultBackend:
-        enabled: true
-        service:
-          name: default-backend
-          port:
-            number: 80
+      config:
+        enable-lua: "true"
       service:
         type: LoadBalancer
         loadBalancerIP: "192.168.88.150" 

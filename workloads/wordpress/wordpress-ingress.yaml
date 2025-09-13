@@ -6,6 +6,8 @@ metadata:
   namespace: wordpress
   annotations:
     kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/server-snippet: |
+      access_by_lua_file /etc/nginx/lua/redirect-404.lua;
 spec:
   rules:
     - host: app.local
