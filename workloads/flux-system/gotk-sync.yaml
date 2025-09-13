@@ -19,6 +19,7 @@ metadata:
   name: flux-system
   namespace: flux-system
 spec:
+  # I missed that :(
   decryption: 
     provider: sops
     secretRef:
