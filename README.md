@@ -344,8 +344,13 @@ All The yaml are in workloads/wordpress
 
 Output
 
-![Wordpress setup!](wordpress.png "Wordpress setup")
+![Wordpress setup!](images/wordpress.png "Wordpress setup")
 
-![Wordpress login!](wp-login.png "Wordpress login")
+![Wordpress login!](images/wp-login.png "Wordpress login")
 
-![Wordpress dashboard!](wp-dashboard.png "Wordpress dashboard")
+![Wordpress dashboard!](images/wp-dashboard.png "Wordpress dashboard")
+
+---
+
+## Task 2: Custom Ingress-NGINX Lua Plugin
+
