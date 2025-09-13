@@ -141,8 +141,6 @@ sudo mv sops-v3.10.2.linux.amd64 /usr/local/bin/sops
 sudo chmod +x /usr/local/bin/sops
 ```
 
-- check -
-
 Generate an age Key
 
 ```bash
@@ -352,11 +350,14 @@ Output
 
 ---
 
-- check -
-
 ## Task 2: Custom Ingress-NGINX Lua Plugin
 
-Cant Solved
+<b> I don't know about the Lua Plugin, I tired but Can't kind the soltuion </b>
 
 ## Task 3: Monitoring
 
+![grafana login!](images/grafana.png "grafana login")
+
+![grafana dashboard!](images/grafana-dashboard.png "grafana dashboard")
+
+<b> NOTE: I didn’t have enough time to set up the Grafana dashboard JSON </b>
