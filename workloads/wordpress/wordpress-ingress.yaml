@@ -6,17 +6,6 @@ metadata:
   namespace: wordpress
   annotations:
     kubernetes.io/ingress.class: nginx
-    nginx.ingress.kubernetes.io/server-snippet: |
-      # Define a custom named location for 404
-      error_page 404 = @redirect_google;
-
-      location @redirect_google {
-          access_by_lua_block {
-              ngx.status = ngx.HTTP_MOVED_TEMPORARILY
-              ngx.header["Location"] = "https://google.com"
-              ngx.exit(ngx.HTTP_MOVED_TEMPORARILY)
-          }
-      }
 spec:
   rules:
     - host: app.local

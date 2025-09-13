@@ -4,5 +4,5 @@ resources:
 - namespace.yaml
 - HelmRepository.yaml
 - HelmRelease.yaml
-- default-backend.yaml
-- plugin-configmap.yaml
+# - default-backend.yaml
+# - plugin-configmap.yaml
