@@ -342,3 +342,6 @@ root@ubuntu-Standard-PC-i440FX-PIIX-1996:/home/ubuntu# curl 192.168.88.150
 
 All The yaml are in workloads/wordpress
 
+Output
+
+![Wordpress!](wordpress.png "Wordpress")
