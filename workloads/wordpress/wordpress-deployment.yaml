@@ -19,6 +19,11 @@ spec:
           env:
             - name: WORDPRESS_DB_HOST
               value: mysql.wordpress.svc.cluster.local:3306
+            - name: WORDPRESS_DB_NAME
+              valueFrom:
+                secretKeyRef:
+                  name: mysql-secret
+                  key: database
             - name: WORDPRESS_DB_USER
               valueFrom:
                 secretKeyRef:
@@ -38,8 +43,9 @@ metadata:
   name: wordpress
   namespace: wordpress
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   ports:
     - port: 80
+      targetPort: 80
   selector:
     app: wordpress
