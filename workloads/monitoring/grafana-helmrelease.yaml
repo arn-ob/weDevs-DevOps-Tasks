@@ -12,7 +12,7 @@ spec:
         kind: HelmRepository
         name: grafana
         namespace: monitoring
-      version: "7.17.0"
+      version: "9.4.5"
   values:
     adminUser: admin
     adminPassword: admin
