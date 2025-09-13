@@ -23,6 +23,6 @@ spec:
     controller:
       service:
         type: LoadBalancer
-        loadBalancerIP: "192.168.100.150" 
+        loadBalancerIP: "192.168.88.150" 
         annotations:
           metallb.universe.tf/address-pool: "nginx-ip-pool"
