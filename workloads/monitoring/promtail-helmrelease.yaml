@@ -4,6 +4,7 @@ metadata:
   name: promtail
   namespace: monitoring
 spec:
+  interval: 5m
   chart:
     spec:
       chart: promtail
