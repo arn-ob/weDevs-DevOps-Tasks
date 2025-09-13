@@ -21,7 +21,7 @@ spec:
       enabled: false
     test:
       enabled: false
-    # following https://github.com/fluxcd/flux2-loggers-example/pull/23/files#diff-5e041afacf25eb055565b4a1c32d5b81201ddce29c84adf13a6ae88463e0832b
+    # following https://github.com/fluxcd/flux2-monitoring-example/pull/23/files#diff-5e041afacf25eb055565b4a1c32d5b81201ddce29c84adf13a6ae88463e0832b
     extraObjects:
       - apiVersion: v1
         kind: ConfigMap
