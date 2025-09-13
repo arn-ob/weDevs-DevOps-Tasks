@@ -354,7 +354,7 @@ Output
 
 ## Task 2: Custom Ingress-NGINX Lua Plugin
 
-<b> I don't know about the Lua Plugin, I tired but Can't kind the soltuion </b>
+<b> I don't know about the Lua Plugin, I tired but Can't find the soltuion </b>
 
 ## Task 3: Monitoring
 
