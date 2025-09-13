@@ -36,7 +36,7 @@ spec:
         podMonitorNamespaceSelector: { }
         podMonitorSelector:
           matchLabels:
-            app.kubernetes.io/component: monitoring
+            app.kubernetes.io/component: loggers
     grafana:
       defaultDashboardsEnabled: false
       adminPassword: flux

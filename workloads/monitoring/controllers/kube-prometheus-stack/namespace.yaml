@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: monitoring
+  name: loggers
   labels:
-    app.kubernetes.io/component: monitoring
+    app.kubernetes.io/component: loggers
     pod-security.kubernetes.io/enforce: privileged

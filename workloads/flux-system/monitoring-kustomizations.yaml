@@ -2,13 +2,13 @@
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
-  name: monitoring-controllers
+  name: loggers-controllers
   namespace: flux-system
 spec:
   interval: 1h
   retryInterval: 2m
   timeout: 10m
-  path: ./workloads/monitoring/controllers
+  path: ./workloads/loggers/controllers
   prune: true
   wait: true
   sourceRef:
@@ -19,17 +19,17 @@ spec:
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
-  name: monitoring-configs
+  name: loggers-configs
   namespace: flux-system
 spec:
   dependsOn:
-    - name: monitoring-controllers
+    - name: loggers-controllers
   interval: 1h
   retryInterval: 2m
   timeout: 5m
   prune: true
   wait: true
-  path: ./workloads/monitoring/configs
+  path: ./workloads/loggers/configs
   sourceRef:
     kind: GitRepository
     name: flux-system

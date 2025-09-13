@@ -1,10 +1,10 @@
-apiVersion: monitoring.coreos.com/v1
+apiVersion: loggers.coreos.com/v1
 kind: PodMonitor
 metadata:
   name: flux-system
   labels:
     app.kubernetes.io/part-of: flux
-    app.kubernetes.io/component: monitoring
+    app.kubernetes.io/component: loggers
 spec:
   namespaceSelector:
     matchNames:
